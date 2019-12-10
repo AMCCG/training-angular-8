@@ -1,5 +1,5 @@
-<div class="container-fluid">Welcome to {{ title }}!</div>
-<div class="container">
+<app-herader></app-herader>
+<!-- <div class="container">
   <div class="d-flex flex-wrap p-2">
     <div class="p-2" *ngFor="let user of users">
       <div class="card ">
@@ -14,4 +14,28 @@
       </div>
     </div>
   </div>
+</div> -->
+<div class="container">
+  <div class="row">
+    <div class="col-1">
+      <button class="btn btn-warning" (click)="goToLogin()">Login</button>
+    </div>
+    <div class="col-1">
+      <button class="btn btn-warning" (click)="goToUserPage()">User</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-10">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="col-1">
+      <app-login></app-login>
+    </div>
+    <div class="col-1">
+      <app-login></app-login>
+    </div>
+  </div>
 </div>
+<!-- <app-user></app-user>
+<app-login></app-login> -->
+<app-footer></app-footer>
