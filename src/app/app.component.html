@@ -1,20 +1,4 @@
 <app-herader></app-herader>
-<!-- <div class="container">
-  <div class="d-flex flex-wrap p-2">
-    <div class="p-2" *ngFor="let user of users">
-      <div class="card ">
-        <div class="card-header">
-          <img src="{{getPicture(user.sex,user.age)}}" alt="" width="150px">
-        </div>
-        <div class="card-body">
-          <p><b>Name :</b><span>{{user.username}}</span></p>
-          <p><b>Age :</b><span>{{user.age}}</span></p>
-          <button class="btn btn-sm btn-danger float-right" (click)="remove(user.id)">Remove</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
 <div class="container">
   <div class="row">
     <div class="col-1">
@@ -25,17 +9,9 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-10">
+    <div class="col-12">
       <router-outlet></router-outlet>
-    </div>
-    <div class="col-1">
-      <app-login></app-login>
-    </div>
-    <div class="col-1">
-      <app-login></app-login>
     </div>
   </div>
 </div>
-<!-- <app-user></app-user>
-<app-login></app-login> -->
 <app-footer></app-footer>

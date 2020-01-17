@@ -36,4 +36,8 @@ export class UserService {
       else
         return "./assets/picture/svg/girl.svg"
   }
+
+  public getUserByID(id: any): User {
+    return this.users.filter(user => user.id == id)[0]
+  }
 }

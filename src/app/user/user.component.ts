@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from '../user';
 import { UserService } from '../user.service';
 
@@ -11,7 +12,10 @@ export class UserComponent implements OnInit {
 
   public users: User[] = []
 
-  constructor(public userService: UserService) {
+  constructor(
+    public router: Router,
+    public userService: UserService
+  ) {
     console.error("constructor")
   }
 
@@ -25,6 +29,11 @@ export class UserComponent implements OnInit {
 
   public remove(id: number): void {
     this.users = this.users.filter(user => user.id != id)
+  }
+
+  public viewDetail(id: number): void {
+    console.error(id)
+    this.router.navigate(['user/' + id])
   }
 
 }

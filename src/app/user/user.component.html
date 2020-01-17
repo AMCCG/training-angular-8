@@ -8,6 +8,7 @@
                 <div class="card-body">
                     <p><b>Name :</b><span>{{user.username}}</span></p>
                     <p><b>Age :</b><span>{{user.age}}</span></p>
+                    <button class="btn btn-sm btn-primary float-left" (click)="viewDetail(user.id)">View</button>
                     <button class="btn btn-sm btn-danger float-right" (click)="remove(user.id)">Remove</button>
                 </div>
             </div>
